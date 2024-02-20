@@ -7,3 +7,31 @@ img:hover {
   /* or some other value */
   transform: scale(5);
 }
+
+.center {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: auto;
+}
+
+body {
+  text-align: center;
+  background-image: url("../picture/hospital_room16.png"),
+}
+
+.form {
+  display: inline-block;
+}
+
+.bg-music {
+
+  position: absolute;
+  top: 64%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+
+}

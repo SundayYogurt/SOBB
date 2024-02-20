@@ -1,0 +1,15 @@
+.bg {
+
+    background-image: url("../picture/hospital_room16.png"),
+}
+
+.box {
+
+    padding: 2px;
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.box:hover {
+    transform: scale(2.5);
+}

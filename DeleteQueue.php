@@ -1,11 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 <?php
 
-if (isset($_GET['Pid'])) {
-    $strFoodID = ($_GET['Pid']);
-}
 require 'conn.php';
 $sql = "DELETE FROM queue WHERE Pid = :Pid ";
 $stml = $conn->prepare($sql);
@@ -13,13 +24,13 @@ $stml->bindParam(':Pid', $_GET['Pid']);
 
 
 if ($stml->execute()) :
-  echo '
+    echo '
   <script type="text/javascript">        
   $(document).ready(function(){
 
       swal({
           title: "Success!",
-          text: "Successfuly delete food",
+          text: "Successfuly delete ",
           type: "success",
           timer: 25000,
           showConfirmButton: "ok"
@@ -30,7 +41,7 @@ if ($stml->execute()) :
   </script>
 ';
 else :
-echo '
+    echo '
   <script type="text/javascript">        
   $(document).ready(function(){
 
@@ -53,4 +64,3 @@ $conn = null;
 
 
 ?>
-
